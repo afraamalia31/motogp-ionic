@@ -1,0 +1,7 @@
+{
+  "name": "teumeShop",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
