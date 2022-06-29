@@ -24,3 +24,25 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600;700&display=swap');
+
+ion-header ion-toolbar ion-title {
+  font-weight: 700;
+}
+
+ion-card {
+  border-radius: 10px;
+}
+
+ion-button {
+  margin: 10px;
+  font-weight: 600;
+  --border-radius:10px;
+  --box-shadaw: none;
+}
+.form {
+  --background: var(--ion-color-light);
+  --border-radius: 10px;
+  margin: 10px
+}

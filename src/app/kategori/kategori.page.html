@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-icon name="bicycle-outline" size="large"></ion-icon>
+    </ion-buttons>
+    <ion-title class="ion-text-center">
+      Teume Sport
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-buttons routerLink="/akun">
+        <ion-icon slot="icon-only" name="person" ></ion-icon>
+      </ion-buttons>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title> Sport Category</ion-title>
+    <ion-button slot="start" color="success">
+      <ion-back-button></ion-back-button>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="kategori">
+  <ion-fab *ngIf="kategori.length > 0" slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button routerLink="/kategori-add">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-card *ngIf="kategori.length == 0" class="ion-text-center">
+    <ion-card-header>
+      <ion-card-title>Belum Ada Produk</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>Silahkan tambahkan produk Anda dahulu</ion-card-content>
+    <ion-button routerLink="/kategori-add">Tambah Produk</ion-button>
+  </ion-card>
+
+  <ion-card *ngFor="let item of kategori">
+    <ion-item button lines="none" [routerLink]="['/kategori-edit', item.id]">
+      <ion-label>{{ item.nama }}</ion-label>
+    </ion-item>
+  </ion-card>
+
+</ion-content>

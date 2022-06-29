@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-icon name="bicycle-outline" size="large"></ion-icon>
+    </ion-buttons>
+    <ion-title class="ion-text-center">
+      Teume Sport
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-buttons routerLink="/akun">
+        <ion-icon slot="icon-only" name="person" ></ion-icon>
+      </ion-buttons>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title> Preview MotorGP</ion-title>
+    <ion-button slot="start" color="success">
+      <ion-back-button></ion-back-button>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor="let w of motor.results">
+    <ion-grid>
+      <img src="https://www.thesportsdb.com/images/media/event/thumb/{{w.Poster}}" height="140px"><br/>
+    <h3>{{ w.Round }}</h3>
+    <h6>{{ w.Grand_Prix_of_Qatar }} </h6>
+    <ion-text color="danger">{{ w.date | date:'dd-MMM-yyyy ' }} </ion-text>
+    </ion-grid>
+  </ion-item>
+
+</ion-content>

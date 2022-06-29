@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-icon name="bicycle-outline" size="large"></ion-icon>
+    </ion-buttons>
+    <ion-title class="ion-text-center">
+      Teume 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<br/><br/>
+<ion-content>
+  <ion-card>
+    <ion-item class="form" lines="none">
+      <ion-icon slot="start" name="mail"></ion-icon>
+      <ion-input type="email" placeholder="Email" [(ngModel)]="email"></ion-input>
+    </ion-item>
+    <ion-item class="form" lines="none">
+      <ion-icon slot="start" name="key"></ion-icon>
+      <ion-input type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" color="success" [disabled]="!email || !password" (click)="masuk()">Login</ion-button>
+  </ion-card>
+</ion-content>
