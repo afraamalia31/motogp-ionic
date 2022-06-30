@@ -23,14 +23,18 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-item *ngFor="let w of motor.results">
-    <ion-grid>
-      <img src="https://www.thesportsdb.com/images/media/event/thumb/{{w.Poster}}" height="140px"><br/>
-    <h3>{{ w.Round }}</h3>
-    <h6>{{ w.Grand_Prix_of_Qatar }} </h6>
-    <ion-text color="danger">{{ w.date | date:'dd-MMM-yyyy ' }} </ion-text>
-    </ion-grid>
-  </ion-item>
 
+
+<ion-content>
+
+  <ion-card *ngFor="let w of motor.results">
+    <img src="https://www.thesportsdb.com/images/media/event/thumb/{{w.Poster}}" height="200px"><br/>
+    <ion-card-header>
+        <ion-card-subtitle>
+          {{ w.Round }} | {{ w.date | date:'dd-MMM-yyyy ' }}
+        </ion-card-subtitle>
+        <ion-card-title>{{ w.Grand_Prix_of_Qatar }}</ion-card-title>
+      </ion-card-header>
+  </ion-card>
+  
 </ion-content>
