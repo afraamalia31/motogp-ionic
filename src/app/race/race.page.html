@@ -14,49 +14,50 @@
   </ion-toolbar>
 </ion-header>
 
-
-
 <ion-header class="ion-no-border">
   <br/>
   <ion-toolbar>
     <ion-title> Next Race</ion-title>
     <ion-button slot="start" color="success">
-      <ion-back-button></ion-back-button>
+      <ion-back-button color="light"></ion-back-button>
     </ion-button>
   </ion-toolbar>
 </ion-header>
 
-
 <ion-content>
  <ion-card>
-  <table class="table" >
-    <thead>
-      <tr>
-
-        <th scope="col" class="k1">Nama</th>
-        <th scope="col" class="k1">Tempat</th>
-        <th scope="col" class="k1">Tanggal</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="baris">Mark</td>
-        <td class="baris">Otto</td>
-        <td class="baris">@mdo</td>
-      </tr>
-      <!-- <tr>
-
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
-      </tr>
-    </tbody> -->
-  </table>
+  <ion-list>
+    <ion-item>
+      <ion-label>
+        <table class="table" >
+          <thead>
+            <tr>
+              <th scope="col" class="k1">Nama</th>
+              <th scope="col" class="k1">Tempat</th>
+              <th scope="col" class="k1">Tanggal</th>
+            </tr>
+          </thead>
+        </table>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+  <ion-item>
+    <ion-label>
+      <tbody>
+        <tr>
+          <td class="baris">Jacob</td>
+          <td class="baris">Thornton</td>
+          <td class="baris">@fat</td>
+        </tr>
+        <!-- <tr>
+          <td colspan="2">Larry the Bird</td>
+          <td>@twitter</td>
+        </tr> -->
+      </tbody>
+    </ion-label>
+  </ion-item>
+</ion-list>
 
  </ion-card>
 </ion-content>

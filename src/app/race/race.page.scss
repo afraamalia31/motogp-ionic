@@ -1,8 +1,21 @@
 .k1 {
   width: 300px;
+  color:rgb(255, 0, 0);
+  font-weight: bold;
 }
 
 .baris {
   width: 300px;
   text-align: center;
+  color: black;
+  font-weight: lighter;
+}
+
+.garis {
+  color: rgb(11, 11, 11);
+}
+
+.table {
+  --border-color:brown;
+
 }
