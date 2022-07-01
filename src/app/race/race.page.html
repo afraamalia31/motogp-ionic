@@ -15,24 +15,48 @@
 </ion-header>
 
 
+
 <ion-header class="ion-no-border">
   <br/>
   <ion-toolbar>
-    <ion-title> Preview MotoGP</ion-title>
+    <ion-title> Next Race</ion-title>
     <ion-button slot="start" color="success">
       <ion-back-button></ion-back-button>
     </ion-button>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-item *ngFor="let w of motor.results">
-    <ion-grid>
-      <img src="https://www.thesportsdb.com/images/media/event/thumb/{{w.Poster}}" height="140px"><br/>
-    <h3>{{ w.Round }}</h3>
-    <h6>{{ w.Grand_Prix_of_Qatar }} </h6>
-    <ion-text color="danger">{{ w.date | date:'dd-MMM-yyyy ' }} </ion-text>
-    </ion-grid>
-  </ion-item>
 
+<ion-content>
+ <ion-card>
+  <table class="table" >
+    <thead>
+      <tr>
+
+        <th scope="col" class="k1">Nama</th>
+        <th scope="col" class="k1">Tempat</th>
+        <th scope="col" class="k1">Tanggal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="baris">Mark</td>
+        <td class="baris">Otto</td>
+        <td class="baris">@mdo</td>
+      </tr>
+      <!-- <tr>
+
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody> -->
+  </table>
+
+ </ion-card>
 </ion-content>

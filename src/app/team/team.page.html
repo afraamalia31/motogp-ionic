@@ -15,27 +15,15 @@
 </ion-header>
 
 <ion-header class="ion-no-border">
+  <br/> 
   <ion-toolbar>
-    <br/> <br/>
-    <ion-title> Kelola Kategori</ion-title>
+    <ion-title> Team </ion-title>
     <ion-button slot="start" color="success">
       <ion-back-button></ion-back-button>
     </ion-button>
   </ion-toolbar>
 </ion-header>
 
-<ion-content *ngIf="kategori">
-  <ion-item class="form" lines="none">
-    <ion-input type="text" placeholder="Nama Kategori" [(ngModel)]="kategori.nama"></ion-input>
-  </ion-item>
-  <ion-item class="form" lines="none">
-    <ion-textarea rows="4" placeholder="Keterangan singkat" [(ngModel)]="kategori.keterangan"></ion-textarea>
-  </ion-item>
+<ion-content>
 
-  <ion-button expand="block" fill="clear" color="danger" (click)="hapus()">Hapus Kategori</ion-button>
 </ion-content>
-
-<ion-footer>
-  <ion-button expand="block" [disabled]="!kategori || !kategori.nama" (click)="simpan()">Save</ion-button>
-</ion-footer>
-
