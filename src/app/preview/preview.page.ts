@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {MOTOR} from '../../assets/data';
+import {MOTOR} from '../../assets/season';
 
 @Component({
   selector: 'app-preview',

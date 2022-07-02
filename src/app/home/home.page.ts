@@ -16,7 +16,15 @@ export class HomePage {
   ]
 
   preview: any = [
-    {label: 'Preview MotorGP', icon: 'file-tray-stacked', link: '/preview'}
+    {label: 'Season 2022', icon: 'file-tray-stacked', link: '/preview'}
+  ]
+
+  race: any = [
+    {label: 'Next Race', icon: 'file-tray-stacked', link: '/race'}
+  ]
+
+  team: any = [
+    {label: 'Team', icon: 'file-tray-stacked', link: '/team'}
   ]
 
 
