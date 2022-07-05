@@ -19,44 +19,29 @@
     <ion-button slot="start" color="light">
       <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
     </ion-button>
-    <h3>  Next Race </h3>
+    <h3> Players </h3>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
- <ion-card>
+<ion-content *ngFor="let p of player.players">
   <ion-list>
     <ion-item>
-      <ion-label>
-        <table class="table" >
-          <thead>
-            <tr>
-              <th scope="col" class="k1">Nama</th>
-              <th scope="col" class="k1">Tempat</th>
-              <th scope="col" class="k1">Tanggal</th>
-            </tr>
-          </thead>
-        </table>
-      </ion-label>
+      <ion-grid>
+        <ion-row>
+          <ion-col class="ion-text-center">
+            <img src="{{ p.strCutout }}" height="100"><br/>
+          </ion-col>
+          <ion-col class="ion-text-center">
+            <h4> {{ p.strPlayer }} </h4>
+            <h6>  {{ p.strTeam }} </h6>
+          </ion-col>
+          <ion-col class="ion-text-center" *ngFor="let d of detail">
+            <h6 class="negara">{{ p.strNationality }}</h6> <br/><br/>
+            <button class="detail" [routerLink]="d.link">{{ d.label }}</button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     </ion-item>
   </ion-list>
-  <ion-list>
-  <ion-item>
-    <ion-label>
-      <tbody>
-        <tr>
-          <td class="baris">Jacob</td>
-          <td class="baris">Thornton</td>
-          <td class="baris">@fat</td>
-        </tr>
-        <!-- <tr>
-          <td colspan="2">Larry the Bird</td>
-          <td>@twitter</td>
-        </tr> -->
-      </tbody>
-    </ion-label>
-  </ion-item>
-</ion-list>
 
- </ion-card>
 </ion-content>

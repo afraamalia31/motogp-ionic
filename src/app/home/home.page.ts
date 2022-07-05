@@ -27,5 +27,9 @@ export class HomePage {
     {label: 'Team', icon: 'file-tray-stacked', link: '/team'}
   ]
 
+  players: any = [
+    {label: 'Players', icon: 'file-tray-stacked', link: '/players'}
+  ]
+
 
 }

@@ -5,9 +5,9 @@
         <img class="logo-gp" src="https://www.thesportsdb.com/images/media/league/badge/rppvpw1422400797.png/preview" height="60px">
       </a>
     </ion-buttons>
-  
+
     <h1><strong>Teume Sport</strong></h1>
-      
+
     <ion-buttons routerLink="/akun" class="person">
       <ion-icon slot="icon-only" name="person" ></ion-icon>
     </ion-buttons>
@@ -21,7 +21,7 @@
         <img src="https://www.thesportsdb.com/images/media/event/thumb/f08ch71614971333.jpg" weight="100%" height="100%">
     </ion-card>
   </div>
-  
+
   <ion-item>
     <ion-grid>
       <ion-row>
@@ -65,7 +65,7 @@
     </ion-grid>
     <ion-grid>
       <ion-row>
-        <ion-col *ngFor="let t of team" size="10">
+        <ion-col *ngFor="let t of players" size="10">
           <ion-card button class="ion-no-margin ion-text-center menu" [routerLink]="t.link">
             <ion-icon size="large" color="success" [name]="t.icon"></ion-icon>
             <div class="menu-label">{{t.label}}</div>
