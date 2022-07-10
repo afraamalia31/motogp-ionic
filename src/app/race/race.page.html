@@ -1,0 +1,62 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-icon name="bicycle-outline" size="large"></ion-icon>
+    </ion-buttons>
+    <ion-title class="ion-text-center">
+      Teume Sport
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-buttons routerLink="/akun">
+        <ion-icon slot="icon-only" name="person" ></ion-icon>
+      </ion-buttons>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-header class="ion-no-border" >
+  <ion-toolbar >
+    <ion-button slot="start" color="light">
+      <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+    </ion-button>
+    <h3>  Next Race </h3>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <ion-card>
+  <ion-list>
+    <ion-item>
+      <ion-label>
+        <table class="table" >
+          <thead>
+            <tr>
+              <th scope="col" class="k1">Nama</th>
+              <th scope="col" class="k1">Tempat</th>
+              <th scope="col" class="k1">Tanggal</th>
+            </tr>
+          </thead>
+        </table>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+  <ion-item>
+    <ion-label>
+      <tbody>
+        <tr>
+          <td class="baris">Jacob</td>
+          <td class="baris">Thornton</td>
+          <td class="baris">@fat</td>
+        </tr>
+        <!-- <tr>
+          <td colspan="2">Larry the Bird</td>
+          <td>@twitter</td>
+        </tr> -->
+      </tbody>
+    </ion-label>
+  </ion-item>
+</ion-list>
+
+ </ion-card>
+</ion-content>

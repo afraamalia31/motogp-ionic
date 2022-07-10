@@ -52,6 +52,22 @@ const routes: Routes = [
     path: 'preview',
     loadChildren: () => import('./preview/preview.module').then( m => m.PreviewPageModule)
   },
+  {
+    path: 'race',
+    loadChildren: () => import('./race/race.module').then( m => m.RacePageModule)
+  },
+  {
+    path: 'team',
+    loadChildren: () => import('./team/team.module').then( m => m.TeamPageModule)
+  },
+  {
+    path: 'players',
+    loadChildren: () => import('./players/players.module').then( m => m.PlayersPageModule)
+  },
+  {
+    path: 'detail',
+    loadChildren: () => import('./detail/detail.module').then( m => m.DetailPageModule)
+  },
 ];
 
 @NgModule({

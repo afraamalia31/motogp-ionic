@@ -3,6 +3,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { ToastController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 import { take } from 'rxjs/operators';
 import * as firebase from 'firebase/app';
@@ -10,13 +11,17 @@ import * as firebase from 'firebase/app';
 @Injectable({
   providedIn: 'root'
 })
+
 export class AppService {
+
+  url = 'https://www.thesportsdb.com/'
 
   constructor(
     private router: Router,
     private auth: AngularFireAuth,
     private firestore: AngularFirestore,
-    private toastController: ToastController
+    private toastController: ToastController,
+    private http: HttpClient,
   ) {}
 
   async toast(message:string){
@@ -66,5 +71,9 @@ export class AppService {
 
   delete(collection: string, doc: string) {
     return this.firestore.collection(collection).doc(doc).delete();
+  }
+
+  getlink(){
+    return this.http.get(`${this.url}`)
   }
 }

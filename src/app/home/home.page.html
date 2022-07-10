@@ -1,34 +1,77 @@
-<br/><br/> <br/><br/> 
-<ion-content>
-  <div >
-    <img src="https://www.thesportsdb.com/images/media/event/thumb/f08ch71614971333.jpg" weight="100%"><br/>
+<ion-header >
+  <div class="header">
+    <ion-buttons>
+      <a href="/app/home/home.page.html">
+        <img class="logo-gp" src="https://www.thesportsdb.com/images/media/league/badge/rppvpw1422400797.png/preview" height="60px">
+      </a>
+    </ion-buttons>
+
+    <h1><strong>Teume Sport</strong></h1>
+
+    <ion-buttons routerLink="/akun" class="person">
+      <ion-icon slot="icon-only" name="person" ></ion-icon>
+    </ion-buttons>
   </div>
+</ion-header>
+
+<ion-content>
+  <div class="ion-text-start">
+      <h3><strong>Upcoming Big Race</strong></h3>
+    <ion-card>
+        <img src="https://www.thesportsdb.com/images/media/event/thumb/f08ch71614971333.jpg" weight="100%" height="100%">
+    </ion-card>
+  </div>
+
   <ion-item>
     <ion-grid>
-    <ion-row>
-    <ion-col>
-      <ion-grid>
-        <ion-row>
-          <ion-col *ngFor="let item of menu" size="10">
-            <ion-card button class="ion-no-margin ion-text-center menu" [routerLink]="item.link">
-              <ion-icon size="large" color="success" [name]="item.icon"></ion-icon>
-              <div class="menu-label">{{item.label}}</div>
-            </ion-card>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-col>
-    <ion-grid>
       <ion-row>
-        <ion-col *ngFor="let p of preview" size="10">
-          <ion-card button class="ion-no-margin ion-text-center menu" [routerLink]="p.link">
-            <ion-icon size="large" color="success" [name]="p.icon"></ion-icon>
-            <div class="menu-label">{{p.label}}</div>
+        <ion-col *ngFor="let r of race" size="10">
+          <ion-card button class="ion-no-margin ion-text-center menu" [routerLink]="r.link">
+            <ion-icon size="large" color="success" [name]="r.icon"></ion-icon>
+            <div class="menu-label">{{r.label}}</div>
           </ion-card>
         </ion-col>
       </ion-row>
     </ion-grid>
-    </ion-row>
+    <ion-grid>
+      <ion-col>
+        <ion-grid>
+          <ion-row>
+            <ion-col *ngFor="let p of preview" size="10">
+              <ion-card button class="ion-no-margin ion-text-center menu" [routerLink]="p.link">
+                <ion-icon size="large" color="success" [name]="p.icon"></ion-icon>
+                <div class="menu-label">{{p.label}}</div>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
     </ion-grid>
-    </ion-item>
+  </ion-item>
+  <ion-item>
+    <ion-grid>
+      <ion-col>
+        <ion-grid>
+          <ion-row>
+            <ion-col *ngFor="let item of menu" size="10">
+              <ion-card button class="ion-no-margin ion-text-center menu" [routerLink]="item.link">
+                <ion-icon size="large" color="success" [name]="item.icon"></ion-icon>
+                <div class="menu-label">{{item.label}}</div>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col *ngFor="let t of players" size="10">
+          <ion-card button class="ion-no-margin ion-text-center menu" [routerLink]="t.link">
+            <ion-icon size="large" color="success" [name]="t.icon"></ion-icon>
+            <div class="menu-label">{{t.label}}</div>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
 </ion-content>
