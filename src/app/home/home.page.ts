@@ -16,7 +16,7 @@ export class HomePage {
   ]
 
   preview: any = [
-    {label: 'Season 2022', icon: 'file-tray-stacked', link: '/preview'}
+    {label: 'Season', icon: 'file-tray-stacked', link: '/preview'}
   ]
 
   race: any = [
