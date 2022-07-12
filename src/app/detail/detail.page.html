@@ -19,22 +19,16 @@
     <ion-button slot="start" color="light">
       <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
     </ion-button>
-    <h3> Kelola Kategori </h3>
+    <h3> Detail </h3>
   </ion-toolbar>
 </ion-header>
 
-<ion-content *ngIf="kategori">
-  <ion-item class="form" lines="none">
-    <ion-input type="text" placeholder="Nama Kategori" [(ngModel)]="kategori.nama"></ion-input>
-  </ion-item>
-  <ion-item class="form" lines="none">
-    <ion-textarea rows="4" placeholder="Keterangan singkat" [(ngModel)]="kategori.keterangan"></ion-textarea>
-  </ion-item>
-
-  <ion-button expand="block" fill="clear" color="danger" (click)="hapus()">Hapus Kategori</ion-button>
+<ion-content *ngFor="let p of player.players">
+ <ion-card>
+    {{ p.strDescriptionEN }} <br/>
+    {{ p.dateBorn }} <br/>
+    {{ p.strHeight }} <br/>
+    <a href="{{ p.strFacebook }}"> Facebook {{ p.strPlayer }}</a> <br/>
+    <a href="{{ p.strInstagram }}"> Instagram {{ p.strPlayer }}</a>
+ </ion-card>
 </ion-content>
-
-<ion-footer>
-  <ion-button expand="block" [disabled]="!kategori || !kategori.nama" (click)="simpan()">Save</ion-button>
-</ion-footer>
-
