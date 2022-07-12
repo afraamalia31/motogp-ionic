@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="success">
+  <ion-toolbar color="dark">
     <ion-buttons slot="start">
       <ion-icon name="bicycle-outline" size="large"></ion-icon>
     </ion-buttons>
@@ -17,31 +17,31 @@
 <ion-header class="ion-no-border" >
   <ion-toolbar >
     <ion-button slot="start" color="light">
-      <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+      <ion-back-button color="dark" text="" icon="chevron-back-outline"></ion-back-button>
     </ion-button>
-    <h3> Players </h3>
+    <h3> Riders </h3>
   </ion-toolbar>
 </ion-header>
 
 <ion-content *ngFor="let p of player.players">
-  <ion-list>
-    <ion-item>
+  <ion-list >
+    <ion-card>
       <ion-grid>
         <ion-row>
           <ion-col class="ion-text-center">
-            <img src="{{ p.strCutout }}" height="100"><br/>
+            <img src="{{ p.strCutout }}" weight="100%"><br/>
           </ion-col>
-          <ion-col class="ion-text-center">
-            <h4> {{ p.strPlayer }} </h4>
-            <h6>  {{ p.strTeam }} </h6>
+          <ion-col class="ion-text-start">
+            <h4><strong> {{ p.strPlayer }} </strong></h4>
+            <h8> {{ p.strTeam }} </h8>
           </ion-col>
           <ion-col class="ion-text-center" *ngFor="let d of detail">
-            <h6 class="negara">{{ p.strNationality }}</h6> <br/><br/>
-            <button class="detail" [routerLink]="d.link">{{ d.label }}</button>
+            <h6 class="negara">{{ p.strNationality }}</h6> <br/>
+            <ion-button id="{{ p.idPlayer }}" color="dark" size="small" [routerLink]="d.link">{{ d.label }}</ion-button>
           </ion-col>
         </ion-row>
       </ion-grid>
-    </ion-item>
+    </ion-card>
   </ion-list>
 
 </ion-content>

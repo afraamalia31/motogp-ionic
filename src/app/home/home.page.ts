@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonLabel } from '@ionic/angular';
+import {TEAM} from '../../assets/team';
 
 
 @Component({
@@ -10,6 +11,7 @@ import { IonLabel } from '@ionic/angular';
 export class HomePage {
 
   constructor() {}
+  public team = TEAM;
 
   menu: any = [
     {label: 'Kategori', icon: 'file-tray-stacked', link: '/kategori'}
@@ -23,7 +25,7 @@ export class HomePage {
     {label: 'Next Race', icon: 'file-tray-stacked', link: '/race'}
   ]
 
-  team: any = [
+  tea: any = [
     {label: 'Team', icon: 'file-tray-stacked', link: '/team'}
   ]
 
